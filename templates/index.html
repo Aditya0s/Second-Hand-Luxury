@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Second-Hand Luxury Finder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <header class="luxury-header">
+        <div class="header-content">
+            <h1>Second-Hand Luxury Finder</h1>
+            <p class="tagline">Find pre-owned luxury treasures at exceptional prices</p>
+            <div class="search-container">
+                <input type="text" id="search-box" placeholder="Search for Rolex, Chanel, Louis Vuitton..." aria-label="Search box"/>
+                <button id="search-button" aria-label="Search">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="luxury-main">
+        <section id="filters" class="luxury-filters">
+            <div class="filter-group">
+                <label for="category-filter">Category:</label>
+                <select id="category-filter" class="luxury-select">
+                    <option value="">All Categories</option>
+                    <option value="jewellery">Jewelry</option>
+                    <option value="handbags">Handbags</option>
+                    <option value="watches">Watches</option>
+                    <option value="clothing">Clothing</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="brand-filter">Brand:</label>
+                <select id="brand-filter" class="luxury-select">
+                    <option value="">All Brands</option>
+                    <option value="Rolex">Rolex</option>
+                    <option value="Chanel">Chanel</option>
+                    <option value="Louis Vuitton">Louis Vuitton</option>
+                    <option value="Gucci">Gucci</option>
+                    <option value="Hermès">Hermès</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="condition-filter">Condition:</label>
+                <select id="condition-filter" class="luxury-select">
+                    <option value="">All Pre-Owned Conditions</option>
+                    <option value="excellent">Very Good</option>
+                    <option value="good">Used</option>
+                    <option value="fair">Acceptable</option>
+                </select>
+            </div>
+
+            <button id="clear-filters" class="pagination-button">Clear Filters</button>
+        </section>
+
+        <section id="products" class="product-grid">
+            <!-- Product cards will be inserted here -->
+            <div class="empty-state">
+                <i class="fas fa-search fa-3x"></i>
+                <p>Search for pre-owned luxury items (e.g., Rolex, Chanel) or use filters</p>
+            </div>
+        </section>
+
+        <div id="pagination" class="luxury-pagination">
+            <button id="prev-page" class="pagination-button" disabled>
+                <i class="fas fa-chevron-left"></i> Previous
+            </button>
+            <span id="page-number" class="page-indicator">1</span>
+            <button id="next-page" class="pagination-button">
+                Next <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </main>
+
+    <footer class="luxury-footer">
+        <div class="footer-content">
+            <p>© 2025 Second-Hand Luxury Finder | Built with <i class="fas fa-heart"></i></p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/hodophilic_adi?igsh=MWhqaXd0MDVtb2RwNg=="><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/adityasingh9708?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Aditya0s"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
